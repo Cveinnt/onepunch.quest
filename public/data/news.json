@@ -1,0 +1,19 @@
+[
+	{
+		"date": "1649529439074",
+		"zh-CN": {
+			"title": "onepunch.quest离线也可以运行",
+			"content": "<p>如果没有问题的话，你现在应该可以离线使用app了，在荒郊野岭也能健身啦 ;-)</p>",
+			"actionYes": "",
+			"actionClose": "Ok"
+		},
+		"en-US": {
+			"title": "onepunch.quest works offline",
+			"content": "<p>If everything went OK you can run the app without network connection from now on. You can train even in the wilderness. ;-)</p>",
+			"actionYes": "",
+			"actionClose": "Ok"
+		},
+		"action": "",
+		"url": ""
+	}
+]

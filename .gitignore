@@ -1,0 +1,9 @@
+/node_modules/
+/public/build/
+/cypress/screenshots/
+/cypress/videos/
+/cypress/fixtures/
+/cypress/plugins/
+/cypress/support/
+
+.DS_Store

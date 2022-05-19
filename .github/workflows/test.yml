@@ -1,0 +1,38 @@
+name: Tests
+
+on: pull_request
+
+jobs:
+  setup:
+    name: Setup tests
+    runs-on: ubuntu-latest
+    outputs:
+      preview_url: ${{ steps.waitForVercelPreviewDeployment.outputs.url }}
+    steps:
+      - name: Wait for Vercel preview deployment to be ready
+        uses: patrickedqvist/wait-for-vercel-preview@v1.2.0
+        id: waitForVercelPreviewDeployment
+        with:
+          token: ${{ secrets.GITHUB_TOKEN }}
+          max_timeout: 60
+  test:
+    name: Run Cypress
+    needs: setup
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v2
+      - name: Cache node_modules and Cypress
+        uses: actions/cache@v2
+        with:
+          path: |
+            ~/.cache/Cypress
+            node_modules
+          key: situps-cache-${{ runner.os }}-${{ hashFiles('package-lock.json') }}
+      - name: Install Cypress
+        run: npm i cypress
+      - name: Run Cypress
+        uses: cypress-io/github-action@v2
+        with:
+          config: baseUrl=${{ needs.setup.outputs.preview_url }}
+          spec: cypress/integration/test.js
+          install: false
