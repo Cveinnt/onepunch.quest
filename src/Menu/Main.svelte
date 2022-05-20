@@ -59,13 +59,13 @@
       </li>
     {/if}
 
-    {#if $state.page !== "Training"}
+    <!-- {#if $state.page !== "Training"}
       <li class="menu-item">
         <button on:click={() => state.setMenu("PrivacyPolicy")}>
           {string.privacyPolicy}
         </button>
       </li>
-    {/if}
+    {/if} -->
 
     <li class="menu-item">
       <button on:click={() => state.setMenu("Sponsor")}>

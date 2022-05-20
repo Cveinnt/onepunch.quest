@@ -39,7 +39,7 @@
     ResetApp,
     ManualTrainingLevel,
     Instructions,
-    PrivacyPolicy,
+    // PrivacyPolicy,
     CancelTraining,
     ManualLanguage,
     Sponsor,
