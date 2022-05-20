@@ -102,7 +102,7 @@
       </p>
     {:else if situps < 0}
       <p in:appear={{ delay: 500 }} out:appear class="text-subtitle">
-        {string.levitationJoke}
+        {string.negativeJoke}
       </p>
     {/if}
   </div>

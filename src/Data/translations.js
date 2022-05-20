@@ -111,8 +111,8 @@ let translations = {
   },
 
   progressRemember: {
-    "en-US": "Minimalist workout app that helps you become One Punch Man!",
-    "zh-CN": "超极简主义 <br> 健身APP",
+    "en-US": "Become the next One Punch Man!",
+    "zh-CN": "成为一下个 <br> 秃头披风侠！",
   },
 
   saveAppApple: {
@@ -171,8 +171,8 @@ let translations = {
     "zh-CN": "下一步？",
   },
 
-  levitationJoke: {
-    "en-US": "Humans aren't supposed to bend that way, are they..?",
+  negativeJoke: {
+    "en-US": "Leaving today's workout to tomorrow's you, eh?",
     "zh-CN":
       "我自幼从师气功大师，打遍江湖无敌手，却从未听闻武功如此的高手。有空切磋一下可好？",
   },
@@ -426,26 +426,17 @@ let translations = {
 			<h2>How should I start?</h2>
 			<p>To get started, you only need to do the initial test, which is a measure of your current muscle capabilities. Then, if you need it, you may take a day off to rest. After that just open the app and it will provide you with a personalized set of sit-ups to do. I recommend doing this at least three days a week and <strong>take a day off to rest</strong>. </p>
 			<p>It may be hard at the begining, so don't give up easily. It gets better down the road.</p>
-			<h2>I barely can do a single sit-up</h2>
-			<p>If you feel your muscles are too weak you might consider training with sit-up benches. This will give you time to build some muscle. When you are ready, you can reset the app and start over with a new sit-up schedule.</p>
+			<h2>I barely can finish the first set</h2>
+			<p>If you feel your muscles are too weak you might consider lowering the difficulty or training with sit-up benches.</p>
 			<h2>Is this a professional routine?</h2>
-			<p>I am not a professional trainer and this is just a simple workout tracker.</p>
+			<p>No. But it will make you bald and strong. </p>
 			<h2>How to do a good sit-up?</h2>
 			<p>You can easily find guides on YouTube. :)</p>
 			<div class="video">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/8jyhJ6TiUPA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
-			<p>If you have a tough time doing full sit-ups you can always make it a little easier by resting on your back.</p>
-			<div class="video">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/WcHtt6zT3Go" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
-			</div>
-			<h2>Is there a goal here?</h2>
-			<p>You set the goal. The app will ask you if the proposed set of sit-ups was hard or easy to do. If you answer it was hard, it will let you do the same set untill it gets easier. Then it will propose another set with more sit-ups.</p>
-			<p>You can continue as long as you can or choose to stop at any level and just repeat a single set to maintain your level.</p>
-			<p>I also like to start from the begining from time to time by resetting the app and build my way up from the first level all over.</p>
-			<h2>How you use this app?</h2>
-			<p>I recommend that you open this app on your phone as it is easier to take with you wherever you will do the workout.</p>
-			<p>You can install the app by adding this website to your Home Screen.</p>
+			<h2>How do I install this app?</h2>
+			<p>One Punch Quest is available as a PWA (Progressive Web App), which means you can install this app by adding this website to your Home Screen.</p>
 			<p>For Apple users this is the only way for the app to remember your progress. Apple devices tend to remove the saved data after a week of not using any website and the only way to prevent this is by adding it to Home Screen.</p>
 			<p>Android users can add this website to their Home Screen as well to be able to use it as a normal system application.</p>
 		`,
@@ -453,10 +444,10 @@ let translations = {
 			<h2>怎么使用这个App呢？</h2>
 			<p>首先在App主页做一个简单快速的自我体能测试，以便算法评估。如果体测后肌肉酸痛，可以先休息一天。第二天开始便可以根据App提供的训练内容进行锻炼。 <strong>一般针对腹肌推荐训练一天，休息一天</strong>。</p>
 			<p>加油！坚持就是胜利！</p>
-			<h2>如果我连一组仰卧起坐都做不了呢？</h2>
+			<h2>如果我连一组基础锻炼都做不了呢？</h2>
 			<p>可以先放慢脚步，手动更改训练难度。或者从更简单入门的动作入门，比如可以找人扶着做，也可以买专用的辅助器械。</p>
-			<h2>训练计划的生成算法是否科学？</h2>
-			<p>我并不是专业健身教练，但App所使用算法是根据专业健身教练定制的腹肌训练计划生成的。
+			<h2>一拳超人的训练计划是否科学？</h2>
+			<p>不。但你会变秃，也会变强。</p>
 			<h2>如何做一个标准的仰卧起坐？</h2>
 			<p>参见Bilibili :)</p>
 			<div class="video">
