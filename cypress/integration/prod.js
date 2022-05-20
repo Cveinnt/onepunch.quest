@@ -12,7 +12,7 @@ describe("Check if production data available", () => {
 
   it("Choose the training level based on input", () => {
     cy.contains("Ok, let's start").click();
-    cy.get('input[type="number"]').type("2"); // (0 20]: level 1
+    cy.get('input[type="number"]').type("2"); // (0 39]: level 1
     cy.contains("Ok, what's next?").click();
     cy.get(".sidebar-info li:nth-child(2)").contains("11");
 
@@ -20,7 +20,7 @@ describe("Check if production data available", () => {
     cy.visit("/");
 
     cy.contains("Ok, let's start").click();
-    cy.get('input[type="number"]').type("30"); // (20 40]: level 2
+    cy.get('input[type="number"]').type("40"); // (39, 59]: level 2
     cy.contains("Ok, what's next?").click();
     cy.get(".sidebar-info li:nth-child(2)").contains("15");
 

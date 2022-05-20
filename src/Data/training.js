@@ -79,21 +79,21 @@ const training = {
 // training data for test and developement
 const dev = {
   1: {
-    rest: 2,
-    pushups: [1, 1],
-    situps: [1, 1],
-    squats: [1, 1],
+    rest: 60,
+    pushups: [1, 2, 3, 3, 2],
+    situps: [1, 2, 3, 3, 2],
+    squats: [1, 2, 3, 3, 2],
     run: [1],
   },
   2: {
-    rest: 2,
-    pushups: [111, 111],
-    situps: [111, 111],
-    squats: [111, 111],
+    rest: 60,
+    pushups: [2, 3, 3, 4, 3],
+    situps: [2, 3, 3, 4, 3],
+    squats: [2, 3, 3, 4, 3],
     run: [2],
   },
   3: {
-    rest: 2,
+    rest: 60,
     pushups: [3, 4, 5, 5, 4],
     situps: [3, 4, 5, 5, 4],
     squats: [3, 4, 5, 5, 4],
