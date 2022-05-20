@@ -22,7 +22,6 @@ function createStore() {
   // ------------------------------------------------------------------------
   let state = {};
   state.page = localStorage.page ? localStorage.page : "Hello";
-  state.level = localStorage.level ? parseInt(localStorage.level) : 1;
   state.set = localStorage.set ? parseInt(localStorage.set) : 1;
   state.currentStep = localStorage.currentStep
     ? parseInt(localStorage.currentStep)
@@ -56,18 +55,6 @@ function createStore() {
     update((state) => {
       state.page = newPage;
       localStorage.page = state.page;
-
-      return state;
-    });
-  };
-
-  // purpose:		updates the state and sets the user level
-  // arguments: 	user level to set (int)
-  // ------------------------------------------------------------------------
-  let setLevel = (newLevel) => {
-    update((state) => {
-      state.level = newLevel;
-      localStorage.level = state.level;
 
       return state;
     });
@@ -195,7 +182,6 @@ function createStore() {
   return {
     subscribe,
     setPage,
-    setLevel,
     setSet,
     nextSet,
     setStep,

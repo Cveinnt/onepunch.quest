@@ -16,16 +16,10 @@
   // how many situps the user did in the test (int)
   let situps;
 
-  // purpose:		sets the user level based on situps he did in the test
+  // purpose:		sets the user set based on situps he did in the test
   // ------------------------------------------------------------------------
-  function setLevel() {
-    if (situps <= 25) {
-      state.setLevel(1);
-    } else if (situps > 25 && situps <= 70) {
-      state.setLevel(2);
-    } else {
-      state.setLevel(3);
-    }
+  function setSet() {
+    state.setSet(Math.floor(Math.max(Math.min(situps, 200), 0) * 0.05));
   }
 
   // when there is an on-screen keyboard on mobile and we hide the title
@@ -80,7 +74,7 @@
       {string.iDid}
       <input
         type="number"
-        placeholder="50"
+        placeholder="100"
         min="0"
         step="1"
         bind:value={situps}
@@ -88,15 +82,15 @@
       />
       {string.situps(situps)}
     </p>
-    {#if situps > 70}
+    {#if situps > 150}
       <p in:appear={{ delay: 500 }} out:appear class="text-subtitle">
         {string.impressive}
       </p>
-    {:else if situps <= 70 && situps > 25}
+    {:else if situps <= 150 && situps > 75}
       <p in:appear={{ delay: 500 }} out:appear class="text-subtitle">
         {string.niceGoRest}
       </p>
-    {:else if situps <= 25 && situps >= 0 && typeof situps !== "undefined"}
+    {:else if situps <= 75 && situps >= 0 && typeof situps !== "undefined"}
       <p in:appear={{ delay: 500 }} out:appear class="text-subtitle">
         {string.tryHalfsitups}
       </p>
@@ -108,7 +102,7 @@
   </div>
 
   {#if (typeof situps !== "undefined") & (situps > 0)}
-    <MainAction delay="900" on:mainAction={setLevel} changePageTo="Home"
+    <MainAction delay="900" on:mainAction={setSet} changePageTo="Home"
       >{string.whatsNext}</MainAction
     >
   {/if}
