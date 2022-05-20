@@ -19,7 +19,7 @@
   // purpose:		sets the user set based on situps he did in the test
   // ------------------------------------------------------------------------
   function setSet() {
-    state.setSet(Math.floor(Math.max(Math.min(situps, 200), 0) * 0.05));
+    state.setSet(Math.floor(Math.max(Math.min(situps, 200), 20) * 0.05));
   }
 
   // when there is an on-screen keyboard on mobile and we hide the title

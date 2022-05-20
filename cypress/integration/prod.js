@@ -12,7 +12,7 @@ describe("Check if production data available", () => {
 
   it("Choose the training level based on input", () => {
     cy.contains("Ok, let's start").click();
-    cy.get('input[type="number"]').type("2"); // (0 25]: beginner
+    cy.get('input[type="number"]').type("2"); // (0 20]: level 1
     cy.contains("Ok, what's next?").click();
     cy.get(".sidebar-info li:nth-child(2)").contains("11");
 
@@ -20,16 +20,16 @@ describe("Check if production data available", () => {
     cy.visit("/");
 
     cy.contains("Ok, let's start").click();
-    cy.get('input[type="number"]').type("50"); // (25 70]: intermediate
+    cy.get('input[type="number"]').type("30"); // (20 40]: level 2
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("24");
+    cy.get(".sidebar-info li:nth-child(2)").contains("15");
 
     cy.clearLocalStorage();
     cy.visit("/");
 
     cy.contains("Ok, let's start").click();
-    cy.get('input[type="number"]').type("75"); // (70, inf): advanced
+    cy.get('input[type="number"]').type("300"); // (200, inf): level 10
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("43");
+    cy.get(".sidebar-info li:nth-child(2)").contains("53");
   });
 });
