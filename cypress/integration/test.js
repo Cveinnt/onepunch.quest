@@ -14,7 +14,7 @@ describe("Initialize the app", () => {
     cy.contains("Ok, let's start").click();
     cy.get('input[type="number"]').type("10"); // (0 39]: level 1
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("31");
+    cy.get(".sidebar-info li:nth-child(2)").contains("10");
 
     cy.clearLocalStorage();
     cy.visit("/");
@@ -22,7 +22,7 @@ describe("Initialize the app", () => {
     cy.contains("Ok, let's start").click();
     cy.get('input[type="number"]').type("50"); // (40 59]: level 2
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("62");
+    cy.get(".sidebar-info li:nth-child(2)").contains("20");
 
     cy.clearLocalStorage();
     cy.visit("/");
@@ -30,7 +30,7 @@ describe("Initialize the app", () => {
     cy.contains("Ok, let's start").click();
     cy.get('input[type="number"]').type("75"); // (60 79]: level 3
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("93");
+    cy.get(".sidebar-info li:nth-child(2)").contains("30");
   });
 });
 
@@ -41,39 +41,36 @@ describe("Do the workout", () => {
 
     cy.visit("/");
     cy.contains("Start next training").click();
-    cy.contains("Perform 1 sit-up");
+    cy.contains("Perform 10 push-ups");
+    cy.contains("I made it").click();
+    cy.get(".training-number").contains("2");
+    cy.contains("I made it").click();
+    cy.get(".training-number").contains("2");
     cy.contains("I made it").click();
     cy.get(".training-number").contains("2");
     cy.contains("I made it").click();
     cy.contains("Nice");
     cy.contains("It was ok").click();
-    cy.get(".sidebar-info li:nth-child(1)").contains("2");
-    cy.get(".sidebar-info li:nth-child(2)").contains("22");
+    cy.get(".sidebar-info li:nth-child(1)").contains("10");
+    cy.get(".sidebar-info li:nth-child(2)").contains("20");
     cy.get(".sidebar-info li:nth-child(3)").contains("2");
-  });
-
-  it("Repeat workout", () => {
     cy.contains("Start next training").click();
     cy.wait(300).contains("I made it").click();
     cy.wait(300).contains("I made it").click();
+    cy.wait(300).contains("I made it").click();
+    cy.wait(300).contains("I made it").click();
     cy.contains("It was hard").click();
-    cy.get(".sidebar-info li:nth-child(1)").contains("2");
-    cy.get(".sidebar-info li:nth-child(2)").contains("22");
+    cy.get(".sidebar-info li:nth-child(1)").contains("20");
+    cy.get(".sidebar-info li:nth-child(2)").contains("20");
     cy.get(".sidebar-info li:nth-child(3)").contains("2");
-  });
-
-  it("Cancel workout", () => {
     cy.contains("Start next training").click();
     cy.contains("I made it");
     cy.get(".menu-toggle").last().click();
     cy.contains("Cancel this training").click();
     cy.contains("Yes").click();
-    cy.get(".sidebar-info li:nth-child(1)").contains("2");
-    cy.get(".sidebar-info li:nth-child(2)").contains("22");
+    cy.get(".sidebar-info li:nth-child(1)").contains("20");
+    cy.get(".sidebar-info li:nth-child(2)").contains("20");
     cy.get(".sidebar-info li:nth-child(3)").contains("2");
-  });
-
-  it("Skip the rest", () => {
     cy.contains("Start next training").click();
     cy.contains("I made it").click();
     cy.contains("Skip the wait").click();
@@ -82,7 +79,6 @@ describe("Do the workout", () => {
 
   it("Repeats the last training available", () => {
     localStorage.page = "Training";
-    localStorage.level = 1;
     localStorage.set = 2;
     localStorage.currentStep = 1;
     localStorage.congratsShown = true;
@@ -90,40 +86,47 @@ describe("Do the workout", () => {
     cy.visit("/");
 
     cy.contains("I made it").click();
+    cy.contains("I made it").click();
+    cy.contains("I made it").click();
+    cy.contains("I made it").click();
     cy.contains("It was ok").click();
-    cy.get(".sidebar-info li:nth-child(3)").contains("2");
+    cy.get(".sidebar-info li:nth-child(3)").contains("3");
     cy.contains("Start next training").click();
     cy.contains("I made it");
   });
 
   it("Doesn't show congratulations after 100 sit-ups when it was too hard", () => {
     localStorage.page = "Training";
-    localStorage.level = 1;
-    localStorage.set = 2;
+    localStorage.set = 10;
     localStorage.currentStep = 1;
     localStorage.removeItem("congratsShown");
 
     cy.visit("/");
 
     cy.contains("I made it").click();
+    cy.contains("I made it").click();
+    cy.contains("I made it").click();
+    cy.contains("I made it").click();
     cy.contains("It was hard").click();
-    cy.get(".sidebar-info li:nth-child(3)").contains("2");
+    cy.get(".sidebar-info li:nth-child(3)").contains("10");
   });
 
   it("Shows congratulations after 100 sit-ups", () => {
     localStorage.page = "Training";
-    localStorage.level = 1;
-    localStorage.set = 2;
+    localStorage.set = 10;
     localStorage.currentStep = 1;
     localStorage.removeItem("congratsShown");
 
     cy.visit("/");
 
     cy.contains("I made it").click();
+    cy.contains("I made it").click();
+    cy.contains("I made it").click();
+    cy.contains("I made it").click();
     cy.contains("It was ok").click();
     cy.contains("Hey there, you just did");
     cy.contains("Thanks!").click();
-    cy.get(".sidebar-info li:nth-child(3)").contains("2");
+    cy.get(".sidebar-info li:nth-child(3)").contains("10");
   });
 });
 
@@ -143,10 +146,9 @@ describe("Menu", () => {
 
     cy.get(".menu-toggle").click();
     cy.contains("Change level").click();
-    cy.contains("Set your skill to:").next().select("Advanced");
     cy.contains("Set your level to:").next().select("2");
     cy.contains("Accept").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("66");
+    cy.get(".sidebar-info li:nth-child(2)").contains("20");
     cy.get(".sidebar-info li:nth-child(3)").contains("2");
   });
 

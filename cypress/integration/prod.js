@@ -14,7 +14,7 @@ describe("Check if production data available", () => {
     cy.contains("Ok, let's start").click();
     cy.get('input[type="number"]').type("2"); // (0 39]: level 1
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("31");
+    cy.get(".sidebar-info li:nth-child(2)").contains("10");
 
     cy.clearLocalStorage();
     cy.visit("/");
@@ -22,7 +22,7 @@ describe("Check if production data available", () => {
     cy.contains("Ok, let's start").click();
     cy.get('input[type="number"]').type("40"); // (39, 59]: level 2
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("62");
+    cy.get(".sidebar-info li:nth-child(2)").contains("20");
 
     cy.clearLocalStorage();
     cy.visit("/");
@@ -30,6 +30,6 @@ describe("Check if production data available", () => {
     cy.contains("Ok, let's start").click();
     cy.get('input[type="number"]').type("300"); // (200, inf): level 10
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("310");
+    cy.get(".sidebar-info li:nth-child(2)").contains("100");
   });
 });

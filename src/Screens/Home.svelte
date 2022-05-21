@@ -18,7 +18,11 @@
       ? training[$state.set]["situps"].reduce((a, b) => a + b, 0)
       : 0;
   $: commingUp = training[$state.set]["situps"].reduce((a, b) => a + b, 0);
-  $: sidebarData = [$state.situpsLast, (commingUp * 10) / 31, $state.set];
+  $: sidebarData = [
+    ($state.situpsLast * 10) / 31,
+    (commingUp * 10) / 31,
+    $state.set,
+  ];
 </script>
 
 <Sidebar data={sidebarData} />
