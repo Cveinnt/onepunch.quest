@@ -27,6 +27,25 @@ let translations = {
     return intlNumber(howMany, exports.situpsStrings);
   },
 
+  workouts: (currentStep) => {
+    currentStep = currentStep === undefined ? 0 : currentStep;
+    const workoutStrings = {
+      "en-US": {
+        0: "push-ups",
+        1: "sit-ups",
+        2: "squats",
+        3: "km",
+      },
+      "zh-CN": {
+        0: "push-ups",
+        1: "sit-ups",
+        2: "squats",
+        3: "km",
+      },
+    };
+    return workoutStrings[localStorage.language][currentStep];
+  },
+
   situpsStrings: {
     "en-US": {
       many: "sit-ups",

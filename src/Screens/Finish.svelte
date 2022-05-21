@@ -35,7 +35,7 @@
   // return:		triggers an 'finished', sets next training and redirects to home screen or congrats page if passed 100 situps
   // ------------------------------------------------------------------------
   function easy() {
-    if (Object.keys($state.set !== 10)) {
+    if ($state.set < 10) {
       state.nextSet();
     }
 

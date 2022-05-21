@@ -12,25 +12,25 @@ describe("Initialize the app", () => {
 
   it("Choose the training level based on input", () => {
     cy.contains("Ok, let's start").click();
-    cy.get('input[type="number"]').type("10"); // (0 25]: beginner
+    cy.get('input[type="number"]').type("10"); // (0 39]: level 1
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("2");
+    cy.get(".sidebar-info li:nth-child(2)").contains("31");
 
     cy.clearLocalStorage();
     cy.visit("/");
 
     cy.contains("Ok, let's start").click();
-    cy.get('input[type="number"]').type("50"); // (25 70]: intermediate
+    cy.get('input[type="number"]').type("50"); // (40 59]: level 2
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("4");
+    cy.get(".sidebar-info li:nth-child(2)").contains("62");
 
     cy.clearLocalStorage();
     cy.visit("/");
 
     cy.contains("Ok, let's start").click();
-    cy.get('input[type="number"]').type("75");
+    cy.get('input[type="number"]').type("75"); // (60 79]: level 3
     cy.contains("Ok, what's next?").click();
-    cy.get(".sidebar-info li:nth-child(2)").contains("6");
+    cy.get(".sidebar-info li:nth-child(2)").contains("93");
   });
 });
 
