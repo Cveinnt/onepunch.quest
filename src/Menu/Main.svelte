@@ -74,8 +74,10 @@
     </li>
   </ul>
 
-  <a href="https://wensenwu.com" target="_blank" class="credit"
-    >{string.appCreatedBy}</a
+  <a
+    href="https://github.com/Cveinnt/onepunch.quest"
+    target="_blank"
+    class="credit">{string.appCreatedBy}</a
   >
 </Menu>
 

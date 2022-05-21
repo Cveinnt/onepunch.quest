@@ -359,8 +359,8 @@ let translations = {
   // screen: 	menu, main
   // ------------------------------------------------------------------------
   appCreatedBy: {
-    "en-US": "App created by Vincent Wu",
-    "zh-CN": "App作者 Vincent Wu",
+    "en-US": "App created by Cveinnt",
+    "zh-CN": "App作者 Cveinnt",
   },
 
   privacyPolicy: {

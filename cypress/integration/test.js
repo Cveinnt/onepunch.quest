@@ -133,7 +133,7 @@ describe("Do the workout", () => {
 describe("Menu", () => {
   it("Opens menu", () => {
     cy.get(".menu-toggle").last().click();
-    cy.contains("App created by Vincent Wu");
+    cy.contains("App created by Cveinnt");
   });
 
   it("Closes menu", () => {
