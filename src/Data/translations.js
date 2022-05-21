@@ -34,13 +34,13 @@ let translations = {
         0: "push-ups",
         1: "sit-ups",
         2: "squats",
-        3: "km",
+        3: "km run",
       },
       "zh-CN": {
-        0: "俯卧撑",
-        1: "仰卧起坐",
-        2: "深蹲",
-        3: "公里",
+        0: "个 </br> 俯卧撑",
+        1: "个 </br> 仰卧起坐",
+        2: "个 </br> 深蹲",
+        3: "公里 </br> 慢跑",
       },
     };
     return workoutStrings[localStorage.language][currentStep];
@@ -125,13 +125,14 @@ let translations = {
   // screen: 	hello
   // ------------------------------------------------------------------------
   helloThere: {
-    "en-US": "ONE PUNCH QUEST",
+    "en-US": "ONE PUNCH. QUEST",
     "zh-CN": "一拳の道",
   },
 
   progressRemember: {
-    "en-US": "Become the next <br> One Punch Man!",
-    "zh-CN": "成为一下个 <br> 秃头披风侠！",
+    "en-US":
+      "Take the「Road to Hero」and challenge yourself to be the next</br>One Punch Man!",
+    "zh-CN": "踏上「英雄之路」<br>成为一下个<br>秃头披风侠！",
   },
 
   saveAppApple: {
@@ -169,8 +170,8 @@ let translations = {
   },
 
   impressive: {
-    "en-US": "Impressive! You're pretty advanced.",
-    "zh-CN": "体能很棒！看来是老手哦",
+    "en-US": "Saitama Sensei, is that you?",
+    "zh-CN": "琦玉老师，是你嘛？",
   },
 
   niceGoRest: {
@@ -181,8 +182,8 @@ let translations = {
 
   tryHalfsitups: {
     "en-US":
-      "It's ok if you feel it's a bit hard. Getting started is the first step of success!",
-    "zh-CN": "如果你觉得有点难，没关系！决心和态度是才是成功的第一步",
+      "Saitama Sensei once said:「Human beings are strong because we can change ourselves」It's ok if you feel it's a bit hard - what's important is your ability to adapt and presevere.",
+    "zh-CN": "如果你觉得有点难，没关系！正所谓「人类真正的强大是自我改变」",
   },
 
   whatsNext: {
@@ -192,8 +193,7 @@ let translations = {
 
   negativeJoke: {
     "en-US": "Leaving today's workout to tomorrow's you, eh?",
-    "zh-CN":
-      "我自幼从师气功大师，打遍江湖无敌手，却从未听闻武功如此的高手。有空切磋一下可好？",
+    "zh-CN": "明天的仰卧起坐，交给...明天的你？",
   },
 
   // screen: 	home
@@ -333,12 +333,12 @@ let translations = {
 
   congratsUnits: {
     "en-US": "push-ups/sit-ups/squats",
-    "zh-CN": "俯卧撑/仰卧起坐/深蹲",
+    "zh-CN": "个俯卧撑/仰卧起坐/深蹲",
   },
 
   inSinglePractice: {
     "en-US": "in a single try!",
-    "zh-CN": "（一口气耶）",
+    "zh-CN": "祝贺你首次完成琦玉老师的健身日常！",
   },
 
   movingOn: {
@@ -348,7 +348,7 @@ let translations = {
 
   respects: {
     "en-US": "My respect and congratulations!",
-    "zh-CN": "进步优异，再加再励！",
+    "zh-CN": "坚持不易，再加再励！",
   },
 
   thanks: {
@@ -448,16 +448,17 @@ let translations = {
   instructionsContent: {
     "en-US": `
 			<h2>How should I start?</h2>
-			<p>To get started, you only need to do the initial test, which is a measure of your current muscle capabilities. Then, if you need it, you may take a day off to rest. After that just open the app and it will provide you with a personalized set of sit-ups to do. I recommend doing this at least three days a week and <strong>take a day off to rest</strong>. </p>
-			<p>It may be hard at the begining, so don't give up easily. It gets better down the road.</p>
-			<h2>I barely can finish the first set</h2>
-			<p>If you feel your muscles are too weak you might consider lowering the difficulty or training with sit-up benches.</p>
+			<p>To get started, you only need to do the initial test, which measures your basic physical abilities. Then, if you need it, you may take a day off to rest. After that just open the app and it will provide you with a personalized set of Saitama's workout to do. You have to do this  <strong>every day of the weekt</strong> and only rest when absolutely necessary. </p>
+			<p>It may be hard in the begining, but don't give up easily! It gets way better down the road.</p>
+			<h2>I barely can finish the first set!</h2>
+			<p>If you feel your muscles are too weak for the personalized level, you might consider lowering the difficulty or training with tools like sit-up benches.</p>
 			<h2>Is this a professional routine?</h2>
 			<p>No. But it will make you bald and strong. </p>
-			<h2>How to do a good sit-up?</h2>
-			<p>You can easily find guides on YouTube. :)</p>
-			<div class="video">
-				<iframe width="560" height="315" src="https://www.youtube.com/embed/8jyhJ6TiUPA" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
+      <h2>But, but XXX said "One Punch Man workout is killing your gains!"</h2>
+      <p>Look, let's apply some first principle thinking here - some workout is better than none. If you are working your muscles, they will grow. Simple as that.</p>
+      <p>There are folks who went through the challenge and achieved pretty good results! You can easily find examples on YouTube :)</p>
+      <div class="video">
+				<iframe width="560" height="315" src="https://www.youtube.com/embed/JncrtbmdUys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 			<h2>How do I install this app?</h2>
 			<p>One Punch Quest is available as a PWA (Progressive Web App), which means you can install this app by adding this website to your Home Screen.</p>
@@ -466,16 +467,17 @@ let translations = {
 		`,
     "zh-CN": `
 			<h2>怎么使用这个App呢？</h2>
-			<p>首先在App主页做一个简单快速的自我体能测试，以便算法评估。如果体测后肌肉酸痛，可以先休息一天。第二天开始便可以根据App提供的训练内容进行锻炼。 <strong>一般针对腹肌推荐训练一天，休息一天</strong>。</p>
-			<p>加油！坚持就是胜利！</p>
+			<p>首先在App主页做一个简单快速的自我体能测试，以便算法评估。如果体测后肌肉酸痛，可以先休息一天。第二天开始便可以根据App提供的训练内容进行锻炼。</p>
+			<p><strong>加油！每天的坚持就是胜利！</strong></p>
 			<h2>如果我连一组基础锻炼都做不了呢？</h2>
 			<p>可以先放慢脚步，手动更改训练难度。或者从更简单入门的动作入门，比如可以找人扶着做，也可以买专用的辅助器械。</p>
 			<h2>一拳超人的训练计划是否科学？</h2>
 			<p>不。但你会变秃，也会变强。</p>
-			<h2>如何做一个标准的仰卧起坐？</h2>
-			<p>参见Bilibili :)</p>
+			<h2>但我看XXX博主说“千万不要做一拳超人的计划”？</h2>
+      <p>健身是遵循人体基本法的。运动了总不不动好。只要你锻炼了相关的肌肉群体，那么你就会增肌。</p>
+			<p>有不少人坚持这个计划，并得到了良好的结果。参见Bilibili :)</p>
 			<div class="video">
-				<iframe width="560" height="315" src="//player.bilibili.com/player.html?aid=547053958&bvid=BV1bq4y1p7JL&cid=379915154&page=1" border="0" frameborder="no" framespacing="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"> </iframe>
+				<iframe width="560" height="315" src="//player.bilibili.com/player.html?aid=47260525&bvid=BV16b41147cS&cid=82767538&page=1" border="0" frameborder="no" framespacing="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"> </iframe>
 			</div>
 			<h2>手机如何使用App？</h2>
 			<p>手机用户可以将本网页添加到主屏幕，以便快捷使用。</p>

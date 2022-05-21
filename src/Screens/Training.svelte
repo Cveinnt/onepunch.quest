@@ -173,7 +173,7 @@
             <strong class="training-number"
               >{currentsitups[$state.currentStep]}</strong
             >
-            {string.workouts($state.currentStep)}
+            {@html string.workouts($state.currentStep)}
           {:else}
             {string.letsJust} <br />{string.restFor}
             <strong class="training-number">{currentRest}</strong>
