@@ -111,7 +111,7 @@ let translations = {
   },
 
   progressRemember: {
-    "en-US": "Become the next One Punch Man!",
+    "en-US": "Become the next <br> One Punch Man!",
     "zh-CN": "成为一下个 <br> 秃头披风侠！",
   },
 
@@ -145,7 +145,7 @@ let translations = {
   },
 
   iDid: {
-    "en-US": "I did",
+    "en-US": "I did ",
     "zh-CN": "我能做",
   },
 
