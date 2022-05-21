@@ -39,7 +39,7 @@
       state.nextSet();
     }
 
-    if ($state.situpsLast >= 100 && !$state.congratsShown) {
+    if ($state.situpsLast >= 300 && !$state.congratsShown) {
       state.setPage("Congrats");
     } else {
       state.setPage("Home");

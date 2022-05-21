@@ -37,10 +37,10 @@ let translations = {
         3: "km",
       },
       "zh-CN": {
-        0: "push-ups",
-        1: "sit-ups",
-        2: "squats",
-        3: "km",
+        0: "俯卧撑",
+        1: "仰卧起坐",
+        2: "深蹲",
+        3: "公里",
       },
     };
     return workoutStrings[localStorage.language][currentStep];
@@ -329,6 +329,11 @@ let translations = {
   youvePassed: {
     "en-US": "Hey there, you just did",
     "zh-CN": "恭喜你做了",
+  },
+
+  congratsUnits: {
+    "en-US": "push-ups/sit-ups/squats",
+    "zh-CN": "俯卧撑/仰卧起坐/深蹲",
   },
 
   inSinglePractice: {
