@@ -1,12 +1,14 @@
-# One Punch Quest - [_**onepunch.quest**_](https://onepunch.quest)
+# [**👊 One Punch. Quest**](https://onepunch.quest)
 
-**I am become One Punch Man, 趣味でヒーローにやってものだ!**
+### I am become **One Punch Man**, 趣味でヒーローにやってものだ！
+
+![opm](public/img/opm.gif)
 
 ## Features
 
 - _Hyperminimalist_ design optimized for efficiency, functionality, and ease of use
-- Available on **any OS**: PC, macOS, Linux, and installable as a PWA on mobile devices.
-- Adjustable level of diffuculty
+- Available on **any OS**: PC, macOS, Linux, and installable as a [PWA](https://en.wikipedia.org/wiki/Progressive_web_application) on mobile devices.
+- Adjustable levels of diffuculty
 - Chinese & English localization
 
 ## Tech stack
@@ -20,7 +22,7 @@
 
 # Development
 
-To start developing the app you would need `Node.js`, `npm` and `git`. Then, clone the repository:
+To start developing the app you need to install `Node.js` and `git`. Then, clone the repository:
 
 ```
 git clone https://github.com/Cveinnt/onepunch.quest.git
@@ -32,7 +34,7 @@ Next, move into the directory and install all dependencies:
 cd onepunch.quest && npm install
 ```
 
-To run the development server you just need to use
+To run the development server you just need to use:
 
 ```
 npm run dev
@@ -54,8 +56,8 @@ Then, in a seperate terminal, use:
 npm run test
 ```
 
-Cypress client will open and let you play with the tests. Note that the `test.js` file is written to **test the developement version of the app**. `prod.js` only tests the data pipeline utility of the production version.
+Cypress client will open and let you play with the tests. Note that the `test.js` file is written to **test the developement version of the app**. `prod.js` only tests the data pipeline utility in production environment.
 
 ## Credit
 
-Based on [pushu.ps](https://github.com/z-x/pushu.ps).
+Based on [sixpack.quest](https://sixpack.quest).
