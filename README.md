@@ -42,7 +42,13 @@ This should start the server at http://localhost:8080.
 
 ## Testing
 
-[Cypress](https://cypress.io) is used for end to end testing. The test scripts are located in `cypress/integration/test.js`. To run the tests you just need to use
+[Cypress](https://cypress.io) is used for end to end testing. The test scripts are located in `cypress/integration/test.js`. To run the tests you just need to 1. start dev environment:
+
+```
+npm run dev
+```
+
+Then, in a seperate terminal, use:
 
 ```
 npm run test
@@ -52,4 +58,4 @@ Cypress client will open and let you play with the tests. Note that the `test.js
 
 ## Credit
 
-Inspired by [pushu.ps](https://github.com/z-x/pushu.ps).
+Based on [pushu.ps](https://github.com/z-x/pushu.ps).

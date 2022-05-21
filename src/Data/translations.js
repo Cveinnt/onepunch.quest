@@ -448,22 +448,22 @@ let translations = {
   instructionsContent: {
     "en-US": `
 			<h2>How should I start?</h2>
-			<p>To get started, you only need to do the initial test, which measures your basic physical abilities. Then, if you need it, you may take a day off to rest. After that just open the app and it will provide you with a personalized set of Saitama's workout to do. You have to do this  <strong>every day of the weekt</strong> and only rest when absolutely necessary. </p>
-			<p>It may be hard in the begining, but don't give up easily! It gets way better down the road.</p>
+			<p>To get started, you only need to do one quick physical test. Then, the app will provide you with a personalized set of Saitama's workout to do. You have to do this  <strong>every day of the week</strong> and only rest when absolutely necessary. </p>
+			<p>It may be hard in the begining, but don't give up easily - it gets way better down the road!</p>
 			<h2>I barely can finish the first set!</h2>
-			<p>If you feel your muscles are too weak for the personalized level, you might consider lowering the difficulty or training with tools like sit-up benches.</p>
+			<p>If you are having difficulties, you might consider lowering the level or training with tools like sit-up benches.</p>
 			<h2>Is this a professional routine?</h2>
 			<p>No. But it will make you bald and strong. </p>
       <h2>But, but XXX said "One Punch Man workout is killing your gains!"</h2>
       <p>Look, let's apply some first principle thinking here - some workout is better than none. If you are working your muscles, they will grow. Simple as that.</p>
-      <p>There are folks who went through the challenge and achieved pretty good results! You can easily find examples on YouTube :)</p>
+      <p>There are folks who went through the challenge and achieved pretty good results! You can easily find examples on YouTube and Reddit :)</p>
       <div class="video">
 				<iframe width="560" height="315" src="https://www.youtube.com/embed/JncrtbmdUys" frameborder="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe>
 			</div>
 			<h2>How do I install this app?</h2>
 			<p>One Punch Quest is available as a PWA (Progressive Web App), which means you can install this app by adding this website to your Home Screen.</p>
-			<p>For Apple users this is the only way for the app to remember your progress. Apple devices tend to remove the saved data after a week of not using any website and the only way to prevent this is by adding it to Home Screen.</p>
-			<p>Android users can add this website to their Home Screen as well to be able to use it as a normal system application.</p>
+			<p>For Apple users this is the only way for the app to remember your progress. Apple devices tend to remove saved data after a week of not using the website and the only way to prevent this is by adding it to Home Screen.</p>
+			<p>If you found a bug or have a feature request, feel free to submit a GitHub issue <a href="https://github.com/Cveinnt/onepunch.quest/issues" target=_blank>here</a>. </p>
 		`,
     "zh-CN": `
 			<h2>怎么使用这个App呢？</h2>
@@ -479,8 +479,10 @@ let translations = {
 			<div class="video">
 				<iframe width="560" height="315" src="//player.bilibili.com/player.html?aid=47260525&bvid=BV16b41147cS&cid=82767538&page=1" border="0" frameborder="no" framespacing="0" allow="accelerometer; autoplay; encrypted-media; gyroscope; picture-in-picture" allowfullscreen="true"> </iframe>
 			</div>
-			<h2>手机如何使用App？</h2>
-			<p>手机用户可以将本网页添加到主屏幕，以便快捷使用。</p>
+			<h2>如何安装本App？</h2>
+      <p>一拳の道是一个PWA（渐进式Web 应用），手机用户可以将本网页添加到主屏幕，以便快捷使用。</p>
+      <p>对于苹果用户，这将是唯一能让App记录训练数据的方法。</p>
+      <p>如果你找到了bug，或者有新功能建议，欢迎提交GitHub <a href="https://github.com/Cveinnt/onepunch.quest/issues" target=_blank>issue</a>。 </p>
 		`,
   },
 
@@ -527,7 +529,7 @@ let translations = {
 				<li><a href="https://patreon.com/cveinnt">Patreon</a></li>
 				<li><a href="https://paypal.me/cveinnt">Paypal</a></li>
 			</ul>
-			<p>Any help would be greatly appreciated! :)</p>
+			<p>As the only dev, any help would be greatly appreciated! :)</p>
 		`,
     "zh-CN": `
 			<h2>维护app不易</h2>
