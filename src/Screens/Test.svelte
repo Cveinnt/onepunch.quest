@@ -82,11 +82,11 @@
       />
       {string.situps(situps)}
     </p>
-    {#if situps > 150}
+    {#if situps > 200}
       <p in:appear={{ delay: 500 }} out:appear class="text-subtitle">
         {string.impressive}
       </p>
-    {:else if situps <= 150 && situps > 75}
+    {:else if situps <= 200 && situps > 75}
       <p in:appear={{ delay: 500 }} out:appear class="text-subtitle">
         {string.niceGoRest}
       </p>
