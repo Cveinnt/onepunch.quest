@@ -305,7 +305,7 @@ let translations = {
   },
 
   youveMadeIt: {
-    "en-US": "You did it!",
+    "en-US": "You've finished today's workout!",
     "zh-CN": "今天的锻炼完成！",
   },
 
