@@ -28,7 +28,7 @@ let translations = {
   },
 
   workouts: (currentStep) => {
-    currentStep = currentStep === undefined ? 0 : currentStep;
+    let current = currentStep === undefined ? 0 : currentStep;
     const workoutStrings = {
       "en-US": {
         0: "push-ups",
@@ -43,7 +43,7 @@ let translations = {
         3: "公里 </br> 慢跑",
       },
     };
-    return workoutStrings[localStorage.language][currentStep];
+    return workoutStrings[localStorage.language][current];
   },
 
   situpsStrings: {
