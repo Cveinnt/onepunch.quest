@@ -60,4 +60,4 @@ Cypress client will open and let you play with the tests. Note that the `test.js
 
 ## Credit
 
-Based on [sixpack.quest](https://sixpack.quest).
+Based on [pushu.ps](https://pushu.ps).
