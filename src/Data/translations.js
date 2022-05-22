@@ -130,8 +130,7 @@ let translations = {
   },
 
   progressRemember: {
-    "en-US":
-      "Take the<br>「Road to Hero」<br>and challenge yourself <br>to be the next</br>One Punch Man!",
+    "en-US": "Do the OPM workout,<br>Become the next <br> One Punch Man!",
     "zh-CN": "踏上「英雄之路」<br>成为一下个<br>秃头披风侠！",
   },
 
